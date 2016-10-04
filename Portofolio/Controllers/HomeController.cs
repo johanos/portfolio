@@ -22,7 +22,7 @@ namespace Portofolio.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Here's my info:";
 
             return View();
         }
