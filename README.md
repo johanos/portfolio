@@ -1,4 +1,10 @@
-Welcome to my Portfolio site!
+Welcome to the repo for my Portfolio site!
+
+click [here](https://www.johanos.com) to see the live version!
+
+Preview:
+
+![Preview Image](./preview.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
