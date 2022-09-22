@@ -6,11 +6,7 @@
         "**/.factorypath": true
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "eslint.probe": [
-        "javascript",
-        "javascriptreact",
-        "vue"
-    ],
+    "eslint.probe": ["javascript", "javascriptreact", "vue"],
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
     // Runs Prettier, then ESLint
@@ -22,12 +18,12 @@
         "devpost",
         "Johan's",
         "precached",
+        "predeploy",
         "Ventana",
         "Wayfair"
     ],
     "[xml]": {
-        "editor.defaultFormatter": "DotJoshJohnson.xml",
-        
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
     },
     "xmlTools.splitAttributesOnFormat": true
 }
