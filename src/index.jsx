@@ -5,7 +5,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import './css/index.css';
 import App from './javascript/app';
@@ -17,7 +17,7 @@ import * as serviceWorker from './service-worker-file';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route element={<App />}>
                     <Route path="home" element={<HomeContent />} />
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 </Route>
                 <Route path="*" element={<Navigate to="/home" />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>
 );
 
