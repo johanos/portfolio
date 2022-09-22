@@ -3,6 +3,7 @@
         "dbaeumer.vscode-eslint",
         "wayou.vscode-todo-highlight",
         "esbenp.prettier-vscode",
-        "DotJoshJohnson.xml"
+        "DotJoshJohnson.xml",
+        "dbaeumer.vscode-eslint"
     ]
-  }
+}
