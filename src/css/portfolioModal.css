@@ -7,11 +7,9 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: scroll; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-
-
 
 .portfolio-project-modal-name {
     padding: 20px 0px;
@@ -29,8 +27,8 @@
     padding: 0% 5%;
 }
 
-.portfolio-project-tile-description-wrapper::-webkit-scrollbar { 
-    display: none; 
+.portfolio-project-tile-description-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .portfolio-project-modal-links {
@@ -41,7 +39,7 @@
     text-decoration: none;
 }
 
-.portfolio-project-modal-links a, 
+.portfolio-project-modal-links a,
 .portfolio-project-modal-links a:visited {
     color: rgb(31, 31, 31);
 }
@@ -51,15 +49,14 @@
     color: rgb(128, 128, 128);
 }
 
-.portfolio-project-modal-links-wrapper{
+.portfolio-project-modal-links-wrapper {
     display: inline-flex;
     height: 120px;
 }
 
-
 /* Modal Content */
 .portfolio-project-modal-content {
-    background-color: #FFFFFFb8;
+    background-color: #ffffffb8;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -99,7 +96,6 @@
     vertical-align: middle;
 }
 
-
 .portfolio-project-modal-close:hover,
 .portfolio-project-modal-close:focus {
     color: #000;
@@ -119,7 +115,6 @@
     border-radius: 10px;
 }
 
-
 @media only screen and (min-width: 800px) {
     .portfolio-project-modal-content-hero-image {
         width: 60%;
@@ -128,7 +123,7 @@
         max-height: 730px;
     }
 
-    .portfolio-project-modal-links-wrapper{
+    .portfolio-project-modal-links-wrapper {
         height: fit-content;
     }
 }
@@ -143,5 +138,3 @@
         font-size: 2rem;
     }
 }
-
-

@@ -35,6 +35,9 @@ module.exports = {
                 ` ${'*'.repeat(20)}`
             ],
             2
-        ]
+        ],
+        'react/prefer-stateless-function': ['off'],
+        'jsx-a11y/click-events-have-key-events': ['off'],
+        'jsx-a11y/no-static-element-interactions': ['off']
     }
 };

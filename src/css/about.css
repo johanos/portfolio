@@ -9,9 +9,10 @@
 }
 
 .portfolio-about-content-profile-pic-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
     margin: 0px 40px;
 }
-
 
 .portfolio-about-content-profile-pic {
     height: 80%;
@@ -24,17 +25,17 @@
 .portfolio-about-content-bio {
     padding: 20px;
     font-size: 1.375rem;
-    background-color: #FFFFFF30;
+    background-color: #ffffff30;
     border-radius: 10px;
-    margin-right: 40px;
-
+    margin: 0px 40px;
 }
 
 .portfolio-about-content-resume-button {
-    background-color: #FFFFFF30;
+    background-color: #ffffff30;
     margin: 10px auto 0px auto;
     padding: 10px 20px;
     border-radius: 10px;
+    border: none;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -53,11 +54,11 @@
         justify-content: flex-start;
     }
 
-    .portfolio-about-content-profile-pic-wrapper{
+    .portfolio-about-content-profile-pic-wrapper {
         margin: 20px 40px;
     }
 
-    .portfolio-about-content-bio{
+    .portfolio-about-content-bio {
         padding: 20px 40px;
     }
 }
@@ -72,7 +73,7 @@
     }
 }
 
-@media screen and (max-width: 412px) { 
+@media screen and (max-width: 412px) {
     .portfolio-about-content-wrapper {
         overflow: scroll;
     }
@@ -80,7 +81,7 @@
     .portfolio-about-content-resume-button {
         padding: 10px;
     }
-    
+
     .portfolio-about-content-profile-pic-wrapper {
         height: auto;
     }

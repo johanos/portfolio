@@ -11,13 +11,23 @@
         "javascriptreact",
         "vue"
     ],
-    "editor.formatOnSave": false,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
     // Runs Prettier, then ESLint
     "editor.codeActionsOnSave": [
         "source.formatDocument",
         "source.fixAll.eslint"
     ],
     "cSpell.words": [
-        "precached"
+        "devpost",
+        "Johan's",
+        "precached",
+        "Ventana",
+        "Wayfair"
     ],
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml",
+        
+    },
+    "xmlTools.splitAttributesOnFormat": true
 }

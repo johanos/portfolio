@@ -3,12 +3,12 @@
 
 .portfolio-header {
     overflow: hidden;
-    background-color: #FFFFFF30;
+    background-color: #ffffff30;
     justify-content: space-between;
     padding: 20px 10px;
     font-family: 'Raleway', sans-serif;
 }
-  
+
 /* Style the header links */
 .portfolio-header a {
     float: left;
@@ -16,11 +16,10 @@
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
 }
-
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .portfolio-header-name {
@@ -49,10 +48,10 @@
 
 /* Float the link section to the right */
 .portfolio-header-right {
-float: right;
+    float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 580px) {
     .portfolio-header-name {
         float: none;
