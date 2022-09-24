@@ -30,6 +30,10 @@
     margin: 0px 40px;
 }
 
+.portfolio-about-content-bio a {
+    color: var(--main-color);
+    text-decoration: none;
+}
 .portfolio-about-content-resume-button {
     background-color: #ffffff30;
     margin: 10px auto 0px auto;

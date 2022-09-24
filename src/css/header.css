@@ -42,7 +42,7 @@
 
 /* Style the active/current link*/
 .portfolio-header a.active {
-    background-color: #551a8b;
+    background-color: var(--main-color);
     color: white;
 }
 

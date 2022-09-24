@@ -1,3 +1,7 @@
+body {
+    --main-color: #551a8b;
+}
+
 .App {
     background-image: url('../resources/header.jpg');
     background-color: #cccccc;
