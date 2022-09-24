@@ -50,9 +50,9 @@ export default class PortfolioContent extends Component {
         const projects = this.portfolioData.map((project, index) => {
             return (
                 <ProjectTile
-                    key={project.projectName}
+                    key={project.name}
                     dataKey={index}
-                    projectInfo={project}
+                    project={project}
                     clickEvent={this.handleProjectTileClick}
                 />
             );
@@ -67,11 +67,13 @@ export default class PortfolioContent extends Component {
                 }
             >
                 {projects}
-                <ProjectModal
-                    isShowing={showModal}
-                    closeButtonPressed={this.handleModalClosing}
-                    projectInfo={activeProject}
-                />
+                {showModal ? (
+                    <ProjectModal
+                        isShowing={showModal}
+                        closeButtonPressed={this.handleModalClosing}
+                        project={activeProject}
+                    />
+                ) : null}
             </div>
         );
     }

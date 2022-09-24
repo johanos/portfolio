@@ -6,10 +6,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../css/portfolioContent.css';
-/*
-  props 
-  projectInfo
-*/
+import { projectType } from './project-data/portfolio-project-data';
+
 export default class ProjectTile extends Component {
     handleClick = (event) => {
         const { dataKey, clickEvent } = this.props;
@@ -18,15 +16,12 @@ export default class ProjectTile extends Component {
     };
 
     render() {
-        const { projectInfo } = this.props;
+        const { project } = this.props;
         return (
             <div className="portfolio-project-tile" onClick={this.handleClick}>
-                <img
-                    src={projectInfo.projectThumbnail}
-                    alt="Project Thumbnail"
-                />
+                <img src={project.thumbnail} alt="Project Thumbnail" />
                 <div className="portfolio-project-tile-name">
-                    {projectInfo.projectName}
+                    {project.name}
                 </div>
             </div>
         );
@@ -36,8 +31,5 @@ export default class ProjectTile extends Component {
 ProjectTile.propTypes = {
     dataKey: PropTypes.number.isRequired,
     clickEvent: PropTypes.func.isRequired,
-    projectInfo: PropTypes.shape({
-        projectThumbnail: PropTypes.string.isRequired,
-        projectName: PropTypes.string.isRequired
-    }).isRequired
+    project: projectType.isRequired
 };

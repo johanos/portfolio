@@ -6,11 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../css/portfolioModal.css';
-/*
-  props
-  projectInfo
-  isShowing
-*/
+import { projectType } from './project-data/portfolio-project-data';
 
 /**
  * Opens the related link based on the target
@@ -34,25 +30,23 @@ export default class ProjectModal extends Component {
     };
 
     render() {
-        const { projectInfo: projectToShow } = this.props;
+        const { project: projectToShow } = this.props;
         const { isShowing } = this.props;
         if (!projectToShow) {
             return <div />;
         }
 
         const relatedLinksObj = projectToShow.relatedLinks.map((linkObject) => {
-            const linkEntries = Object.entries(linkObject)[0];
-            const linkAlias = linkEntries[0];
-            const linkAddress = linkEntries[1];
+            const { name, link } = linkObject;
             return (
-                <div key={linkAlias} className="portfolio-project-modal-links">
+                <div key={name} className="portfolio-project-modal-links">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={onRelatedLinkClick}
-                        href={linkAddress}
+                        href={link}
                     >
-                        {linkAlias}
+                        {name}
                     </a>
                 </div>
             );
@@ -82,11 +76,11 @@ export default class ProjectModal extends Component {
                         <div>&times;</div>
                     </div>
                     <div className="portfolio-project-modal-name">
-                        {projectToShow.projectName}
+                        {projectToShow.name}
                     </div>
                     <img
                         className="portfolio-project-modal-content-hero-image"
-                        src={projectToShow.projectThumbnail}
+                        src={projectToShow.thumbnail}
                         alt="Thumbnail"
                     />
                     <div className="portfolio-project-modal-links-wrapper">
@@ -94,7 +88,7 @@ export default class ProjectModal extends Component {
                     </div>
                     <div className="portfolio-project-tile-description-wrapper">
                         <div className="portfolio-project-tile-description">
-                            {projectToShow.projectDescription}
+                            {projectToShow.description}
                         </div>
                     </div>
                 </button>
@@ -105,15 +99,6 @@ export default class ProjectModal extends Component {
 
 ProjectModal.propTypes = {
     closeButtonPressed: PropTypes.func.isRequired,
-    projectInfo: PropTypes.shape({
-        projectDescription: PropTypes.string.isRequired,
-        projectThumbnail: PropTypes.string.isRequired,
-        projectName: PropTypes.string.isRequired,
-        relatedLinks: PropTypes.arrayOf(PropTypes.shape()).isRequired
-    }),
+    project: projectType.isRequired,
     isShowing: PropTypes.bool.isRequired
-};
-
-ProjectModal.defaultProps = {
-    projectInfo: undefined
 };
