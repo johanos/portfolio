@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PortfolioProjectData from './project-data/portfolio-project-data';
 import ProjectTile from './project-tile';
 import ProjectModal from './project-modal';
-import '../css/portfolioContent.css';
+import '../css/portfolio-content.css';
 
 export default class PortfolioContent extends Component {
     constructor(props) {

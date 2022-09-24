@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../css/portfolioContent.css';
+import '../css/portfolio-content.css';
 import { projectType } from './project-data/portfolio-project-data';
 
 export default class ProjectTile extends Component {

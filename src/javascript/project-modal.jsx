@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../css/portfolioModal.css';
+import '../css/portfolio-modal.css';
 import { projectType } from './project-data/portfolio-project-data';
 
 /**
@@ -60,9 +60,8 @@ export default class ProjectModal extends Component {
                         : 'portfolio-project-modal-hidden'
                 }
             >
-                <button
-                    type="button"
-                    className="portfolio-project-modal-content"
+                <div
+                    className="portfolio-project-modal-content-wrapper"
                     onClick={(e) => {
                         e.stopPropagation();
                         return false;
@@ -75,23 +74,32 @@ export default class ProjectModal extends Component {
                     >
                         <div>&times;</div>
                     </div>
-                    <div className="portfolio-project-modal-name">
-                        {projectToShow.name}
-                    </div>
-                    <img
-                        className="portfolio-project-modal-content-hero-image"
-                        src={projectToShow.thumbnail}
-                        alt="Thumbnail"
-                    />
-                    <div className="portfolio-project-modal-links-wrapper">
-                        {relatedLinksObj}
-                    </div>
-                    <div className="portfolio-project-tile-description-wrapper">
-                        <div className="portfolio-project-tile-description">
-                            {projectToShow.description}
+
+                    <div
+                        className="portfolio-project-modal-content"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            return false;
+                        }}
+                    >
+                        <div className="portfolio-project-modal-name">
+                            {projectToShow.name}
+                        </div>
+                        <img
+                            className="portfolio-project-modal-content-hero-image"
+                            src={projectToShow.thumbnail}
+                            alt="Thumbnail"
+                        />
+                        <div className="portfolio-project-modal-links-wrapper">
+                            {relatedLinksObj}
+                        </div>
+                        <div className="portfolio-project-tile-description-wrapper">
+                            <div className="portfolio-project-tile-description">
+                                {projectToShow.description}
+                            </div>
                         </div>
                     </div>
-                </button>
+                </div>
             </div>
         );
     }
