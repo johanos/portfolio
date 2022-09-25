@@ -3,7 +3,7 @@
 
 .portfolio-header {
     overflow: hidden;
-    background-color: #ffffff30;
+    background-color: var(--main-bg);
     justify-content: space-between;
     padding: 10px 5px;
     font-family: 'Raleway', sans-serif;
