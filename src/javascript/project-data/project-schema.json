@@ -7,7 +7,7 @@
         "properties": {
             "name": { "type": "string" },
             "description": { "type": "string" },
-            "thumbnail": { "type": ["string"] },
+            "thumbnail": { "type": "string" },
             "relatedLinks": {
                 "type": "array",
                 "items": {
@@ -18,7 +18,8 @@
                         "type": { "type": "string" },
                         "description": { "type": "string" }
                     }
-                }
+                },
+                "required": ["name", "link", "type"]
             }
         }
     }

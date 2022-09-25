@@ -8,7 +8,7 @@ import { shape, string, arrayOf } from 'prop-types';
 import ProjectSchema from './project-schema.json';
 import {
     SelfCalibration,
-    dollhouseImage,
+    DollhouseImage,
     MP3JS,
     CVRPS,
     Cultour,
@@ -25,9 +25,17 @@ import {
     LazerHarpHardware,
     Phagebook,
     ProctorU,
-    CPUDiagram
+    CPUDiagram,
+    ModelTargetGenerator,
+    CrowdflowUI
 } from './images';
-import { ACVReport, dollhousePaper, CVReport, CVPoster } from './documents';
+import {
+    ACVReport,
+    DollhousePaper,
+    CVReport,
+    CVPoster,
+    MSThesis
+} from './documents';
 import { dollhouseVideo } from './videos';
 
 export const LinkTypeEnum = Object.freeze({
@@ -51,6 +59,58 @@ export const projectType = shape({
 });
 
 const projectData = Object.freeze([
+    {
+        name: 'Vuforia Model Target Generator and Area Target Generator',
+        description:
+            'As part of my tenure at PTC I worked on the Vuforia Model Target ' +
+            'Generator as well as the Area Target Generator.' +
+            '\n\nMy contributions were:\n\n' +
+            '1. Create an on demand rendering solution for our 3D viewer\n' +
+            '2. Help the technical debt of the projects to allow for extensibility\n' +
+            '3. Add workspace tools such as Eslint and Prettier with good rules to enforce code style\n' +
+            '4. Reworked Guide View Image Capture pipeline of the 10.11 MTG using ThreeJS render target\n' +
+            '5. Lead developer on the User Volume feature released on version 10.9 of the MTG',
+        thumbnail: ModelTargetGenerator,
+        relatedLinks: [
+            {
+                name: 'User Volume Feature Preview',
+                link: 'https://www.linkedin.com/posts/patrickscheper97_ptc-vuforia-ar-activity-6963541888586891264-Yzw9',
+                description: 'Feature I worked on',
+                type: LinkTypeEnum.WEBSITE
+            },
+            {
+                name: 'Vuforia Tools Download Page',
+                link: 'https://developer.vuforia.com/downloads/tool',
+                description: "Download page for Vuforia's CV Tools",
+                type: LinkTypeEnum.WEBSITE
+            }
+        ]
+    },
+    {
+        name: 'Princeton M.S Thesis: Crowdflow Pipeline',
+        description:
+            'For my Thesis Project at Princeton University I ' +
+            'developed a method to collect high quality crowd sourced ' +
+            'annotations for optical flow datasets\n' +
+            'I had to create backend systems, front end ui, ' +
+            'and do data analysis to come up with a pipeline to get ' +
+            'results that would have a high precision at the expense of recall',
+        thumbnail: CrowdflowUI,
+        relatedLinks: [
+            {
+                name: 'Masters Thesis',
+                link: MSThesis,
+                description: 'Presentation slides I used to present the work',
+                type: LinkTypeEnum.WEBSITE
+            },
+            {
+                name: 'Presentation Slides',
+                link: 'https://docs.google.com/presentation/d/16zHCS_mShR6Tdw762EU2h991i0fGXeItDowGrKRcXoA/edit?usp=sharing',
+                description: 'Presentation slides I used to present the work',
+                type: LinkTypeEnum.WEBSITE
+            }
+        ]
+    },
     {
         name: 'Exploring the Camera Self Calibration Problem',
         description:
@@ -86,7 +146,7 @@ const projectData = Object.freeze([
             'this was done via a prespective-n-point problem using openCV ' +
             'which then fed data to Unity in order to project ' +
             'patterns onto these items',
-        thumbnail: dollhouseImage,
+        thumbnail: DollhouseImage,
         relatedLinks: [
             {
                 name: 'Live Demo',
@@ -96,7 +156,7 @@ const projectData = Object.freeze([
             },
             {
                 name: 'Paper',
-                link: dollhousePaper,
+                link: DollhousePaper,
                 type: LinkTypeEnum.DOCUMENT,
                 description: ''
             }

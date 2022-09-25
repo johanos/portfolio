@@ -91,6 +91,7 @@ export default class ProjectModal extends Component {
                             alt="Thumbnail"
                         />
                         <div className="portfolio-project-modal-links-wrapper">
+                            <div>Links:</div>
                             {relatedLinksObj}
                         </div>
                         <div className="portfolio-project-tile-description-wrapper">

@@ -4,9 +4,13 @@
 // ********************
 
 import React, { Component } from 'react';
-import { GithubLogo, LinkedInLogo, DevpostLogo } from './project-data/images';
+import {
+    GithubLogo,
+    LinkedInLogo,
+    DevpostLogo,
+    BowTieMe
+} from './project-data/images';
 import '../css/home.css';
-import BowTieMe from '../resources/portfolio/fullsize/BowTieMe.jpg';
 
 class HomeContent extends Component {
     render() {

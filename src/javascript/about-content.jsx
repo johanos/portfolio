@@ -5,8 +5,8 @@
 
 import React, { Component } from 'react';
 import '../css/about.css';
-import profilePic from '../resources/Me.jpg';
-import resume from '../resources/ResumeJohanos.pdf';
+import { Resume } from './project-data/documents';
+import { Me } from './project-data/images';
 
 class AboutContent extends Component {
     /**
@@ -17,7 +17,7 @@ class AboutContent extends Component {
     constructor(props) {
         super(props);
 
-        this.resume = resume;
+        this.resume = Resume;
     }
 
     handleResumeButtonClick = () => {
@@ -30,7 +30,7 @@ class AboutContent extends Component {
                 <div className="portfolio-about-content-profile-pic-wrapper">
                     <img
                         className="portfolio-about-content-profile-pic"
-                        src={profilePic}
+                        src={Me}
                         alt="My Profile Pic"
                     />
                     <button

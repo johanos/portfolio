@@ -21,6 +21,7 @@
     margin: auto;
     padding: 20px 0px;
     font-size: 1rem;
+    white-space: pre-line;
 }
 
 .portfolio-project-tile-description-wrapper {
@@ -30,10 +31,6 @@
 
 .portfolio-project-tile-description-wrapper::-webkit-scrollbar {
     display: none;
-}
-
-.portfolio-project-modal-links {
-    margin: 10px 10px;
 }
 
 .portfolio-project-modal-links a:link {
@@ -52,7 +49,10 @@
 
 .portfolio-project-modal-links-wrapper {
     display: inline-flex;
-    height: 120px;
+}
+
+.portfolio-project-modal-links-wrapper > * {
+    padding: 10px;
 }
 
 .portfolio-project-modal-content-wrapper {
@@ -109,17 +109,14 @@
 .portfolio-project-modal-content-hero-image {
     object-fit: cover;
     width: 90%;
-    height: 50%;
+    height: auto;
     transition: width 0.5s ease-in-out, height 1s ease-in-out;
     border-radius: 10px;
 }
 
 @media only screen and (min-width: 800px) {
     .portfolio-project-modal-content-hero-image {
-        width: 60%;
-        height: 50%;
         max-width: 730px;
-        max-height: 730px;
     }
 
     .portfolio-project-modal-links-wrapper {
@@ -129,8 +126,7 @@
 
 @media only screen and (max-width: 420px) {
     .portfolio-project-modal-content-hero-image {
-        width: 90%;
-        height: 30%;
+        max-width: 730px;
     }
 
     .portfolio-project-modal-name {

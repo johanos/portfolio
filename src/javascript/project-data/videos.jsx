@@ -4,4 +4,4 @@
 // ********************
 
 // eslint-disable-next-line import/prefer-default-export
-export { default as dollhouseVideo } from '../../resources/dollhouse.MOV';
+export { default as dollhouseVideo } from '../../resources/videos/dollhouse.MOV';

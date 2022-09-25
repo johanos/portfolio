@@ -3,7 +3,9 @@
 //	Copyright © 2022
 // ********************
 
-export { default as CVReport } from '../../resources/COS429_Report.pdf';
-export { default as CVPoster } from '../../resources/COS429_Poster.pdf';
-export { default as ACVReport } from '../../resources/COS529_Report.pdf';
-export { default as dollhousePaper } from '../../resources/ProjectionMappedDollhouse.pdf';
+export { default as CVReport } from '../../resources/documents/cos429-report.pdf';
+export { default as CVPoster } from '../../resources/documents/cos429-poster.pdf';
+export { default as ACVReport } from '../../resources/documents/cos529-report.pdf';
+export { default as DollhousePaper } from '../../resources/documents/dollhouse-paper.pdf';
+export { default as Resume } from '../../resources/documents/resume.pdf';
+export { default as MSThesis } from '../../resources/documents/ms-thesis.pdf';
