@@ -159,6 +159,12 @@ const projectData = Object.freeze([
                 link: DollhousePaper,
                 type: LinkTypeEnum.DOCUMENT,
                 description: ''
+            },
+            {
+                name: 'Published Link',
+                link: 'https://dl.acm.org/doi/10.1145/3334480.3383180',
+                type: LinkTypeEnum.WEBSITE,
+                description: 'acm link for this project'
             }
         ]
     },
