@@ -1,7 +1,6 @@
 .portfolio-content {
     text-align: center;
     margin: auto;
-    overflow: scroll;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
