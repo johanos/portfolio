@@ -9,21 +9,6 @@ import { Resume } from './project-data/documents';
 import { Me } from './project-data/images';
 
 class AboutContent extends Component {
-    /**
-     * @type {URL }
-     */
-    resume;
-
-    constructor(props) {
-        super(props);
-
-        this.resume = Resume;
-    }
-
-    handleResumeButtonClick = () => {
-        window.open(this.resume);
-    };
-
     render() {
         return (
             <div className="portfolio-about-content">
@@ -36,13 +21,15 @@ class AboutContent extends Component {
                     <button
                         type="button"
                         className="portfolio-about-content-resume-button"
-                        onClick={this.handleResumeButtonClick}
+                        onClick={() => {
+                            window.open(Resume);
+                        }}
                     >
                         Resume
                     </button>
                 </div>
                 <div className="portfolio-about-content-bio">
-                    Currently, I&apos;m a Research & Development Engineer III at
+                    Currently, I am a Machine Learning Engineer at
                     <a
                         href="https://www.markforged.com"
                         target="_blank"

@@ -5,6 +5,7 @@
 
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Resume } from './project-data/documents';
 
 import '../css/header.css';
 
@@ -48,6 +49,21 @@ export default class Header extends Component {
                         href="portfolio"
                     >
                         Portfolio
+                    </NavLink>
+                    <NavLink
+                        to="/resume"
+                        className={({ isActive, isPending }) => {
+                            if (isActive) return 'active';
+                            if (isPending) return '';
+                            return '';
+                        }}
+                        onClick={(event) => {
+                            event.stopPropagation();
+                            event.preventDefault();
+                            window.open(Resume);
+                        }}
+                    >
+                        Resume
                     </NavLink>
                 </div>
             </div>
