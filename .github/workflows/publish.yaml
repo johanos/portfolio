@@ -35,11 +35,15 @@ jobs:
             - name: Setup Pages
               uses: actions/configure-pages@v4
             - name: Build Site
-              run: npm ci && npm run build
+              run: |
+                  echo "GENERATE_SOURCEMAP=false" >> .env
+                  echo "INLINE_RUNTIME_CHUNK=false" >> .env
+                  echo "REACT_APP_DISABLE_FILE_HASHING=true" >> .env
+                  npm ci
+                  npm run build
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  # Upload entire repository
                   path: './build'
             - name: Deploy to GitHub Pages
               id: deployment
